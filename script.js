@@ -110,17 +110,7 @@ function evaluate(){
     return { finished:false };
 }
 
-// （這裡是你原本第二個 endGame，我沒刪，只修引號）
-function endGame({winner, line}){
-    active = false;
-    if(winner){
-        stateEl.textContent = `${winner} 勝利！`;
-        line.forEach(i=> cells[i].classList.add('win'));
-    }else{
-        stateEl.textContent = '平手';
-    }
-    cells.forEach(c=> c.disabled = true);
-}
+
 
 //
 cells.forEach(cell=>{
